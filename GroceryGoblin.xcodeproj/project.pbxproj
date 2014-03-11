@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		905650F018CFB7950000EF2A /* GGCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 905650EF18CFB7950000EF2A /* GGCell.m */; };
+		905650F218CFB9B00000EF2A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 905650F118CFB9B00000EF2A /* QuartzCore.framework */; };
+		90910254188B2AFB00F488DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90910253188B2AFB00F488DA /* Foundation.framework */; };
+		90910256188B2AFB00F488DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90910255188B2AFB00F488DA /* CoreGraphics.framework */; };
+		90910258188B2AFB00F488DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90910257188B2AFB00F488DA /* UIKit.framework */; };
+		9091025E188B2AFB00F488DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9091025C188B2AFB00F488DA /* InfoPlist.strings */; };
+		90910260188B2AFB00F488DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9091025F188B2AFB00F488DA /* main.m */; };
+		90910264188B2AFB00F488DA /* GGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90910263188B2AFB00F488DA /* GGAppDelegate.m */; };
+		90910267188B2AFB00F488DA /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90910265188B2AFB00F488DA /* Main_iPhone.storyboard */; };
+		9091026A188B2AFB00F488DA /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90910268188B2AFB00F488DA /* Main_iPad.storyboard */; };
+		9091026D188B2AFB00F488DA /* GGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9091026C188B2AFB00F488DA /* GGViewController.m */; };
+		9091026F188B2AFB00F488DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9091026E188B2AFB00F488DA /* Images.xcassets */; };
+		90910276188B2AFC00F488DA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90910275188B2AFC00F488DA /* XCTest.framework */; };
+		90910277188B2AFC00F488DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90910253188B2AFB00F488DA /* Foundation.framework */; };
+		90910278188B2AFC00F488DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90910257188B2AFB00F488DA /* UIKit.framework */; };
+		90910280188B2AFC00F488DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9091027E188B2AFC00F488DA /* InfoPlist.strings */; };
+		90910282188B2AFC00F488DA /* GroceryGoblinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90910281188B2AFC00F488DA /* GroceryGoblinTests.m */; };
+		9091028D188B2B9800F488DA /* GGShoppingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9091028C188B2B9800F488DA /* GGShoppingItem.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		90910279188B2AFC00F488DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90910248188B2AFB00F488DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9091024F188B2AFB00F488DA;
+			remoteInfo = GroceryGoblin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		905650EE18CFB7950000EF2A /* GGCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGCell.h; sourceTree = "<group>"; };
+		905650EF18CFB7950000EF2A /* GGCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGCell.m; sourceTree = "<group>"; };
+		905650F118CFB9B00000EF2A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		905650F418CFBFE80000EF2A /* GGTableViewCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTableViewCellDelegate.h; sourceTree = "<group>"; };
+		90910250188B2AFB00F488DA /* GroceryGoblin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryGoblin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90910253188B2AFB00F488DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		90910255188B2AFB00F488DA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		90910257188B2AFB00F488DA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9091025B188B2AFB00F488DA /* GroceryGoblin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GroceryGoblin-Info.plist"; sourceTree = "<group>"; };
+		9091025D188B2AFB00F488DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9091025F188B2AFB00F488DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		90910261188B2AFB00F488DA /* GroceryGoblin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GroceryGoblin-Prefix.pch"; sourceTree = "<group>"; };
+		90910262188B2AFB00F488DA /* GGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGAppDelegate.h; sourceTree = "<group>"; };
+		90910263188B2AFB00F488DA /* GGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGAppDelegate.m; sourceTree = "<group>"; };
+		90910266188B2AFB00F488DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		90910269188B2AFB00F488DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		9091026B188B2AFB00F488DA /* GGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGViewController.h; sourceTree = "<group>"; };
+		9091026C188B2AFB00F488DA /* GGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGViewController.m; sourceTree = "<group>"; };
+		9091026E188B2AFB00F488DA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		90910274188B2AFC00F488DA /* GroceryGoblinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroceryGoblinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90910275188B2AFC00F488DA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9091027D188B2AFC00F488DA /* GroceryGoblinTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GroceryGoblinTests-Info.plist"; sourceTree = "<group>"; };
+		9091027F188B2AFC00F488DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		90910281188B2AFC00F488DA /* GroceryGoblinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroceryGoblinTests.m; sourceTree = "<group>"; };
+		9091028B188B2B9800F488DA /* GGShoppingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGShoppingItem.h; sourceTree = "<group>"; };
+		9091028C188B2B9800F488DA /* GGShoppingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGShoppingItem.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9091024D188B2AFB00F488DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				905650F218CFB9B00000EF2A /* QuartzCore.framework in Frameworks */,
+				90910256188B2AFB00F488DA /* CoreGraphics.framework in Frameworks */,
+				90910258188B2AFB00F488DA /* UIKit.framework in Frameworks */,
+				90910254188B2AFB00F488DA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90910271188B2AFC00F488DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90910276188B2AFC00F488DA /* XCTest.framework in Frameworks */,
+				90910278188B2AFC00F488DA /* UIKit.framework in Frameworks */,
+				90910277188B2AFC00F488DA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90910247188B2AFB00F488DA = {
+			isa = PBXGroup;
+			children = (
+				90910259188B2AFB00F488DA /* GroceryGoblin */,
+				9091027B188B2AFC00F488DA /* GroceryGoblinTests */,
+				90910252188B2AFB00F488DA /* Frameworks */,
+				90910251188B2AFB00F488DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		90910251188B2AFB00F488DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90910250188B2AFB00F488DA /* GroceryGoblin.app */,
+				90910274188B2AFC00F488DA /* GroceryGoblinTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90910252188B2AFB00F488DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				905650F118CFB9B00000EF2A /* QuartzCore.framework */,
+				90910253188B2AFB00F488DA /* Foundation.framework */,
+				90910255188B2AFB00F488DA /* CoreGraphics.framework */,
+				90910257188B2AFB00F488DA /* UIKit.framework */,
+				90910275188B2AFC00F488DA /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90910259188B2AFB00F488DA /* GroceryGoblin */ = {
+			isa = PBXGroup;
+			children = (
+				90910262188B2AFB00F488DA /* GGAppDelegate.h */,
+				90910263188B2AFB00F488DA /* GGAppDelegate.m */,
+				90910265188B2AFB00F488DA /* Main_iPhone.storyboard */,
+				90910268188B2AFB00F488DA /* Main_iPad.storyboard */,
+				9091026B188B2AFB00F488DA /* GGViewController.h */,
+				9091026C188B2AFB00F488DA /* GGViewController.m */,
+				9091026E188B2AFB00F488DA /* Images.xcassets */,
+				9091025A188B2AFB00F488DA /* Supporting Files */,
+				9091028B188B2B9800F488DA /* GGShoppingItem.h */,
+				9091028C188B2B9800F488DA /* GGShoppingItem.m */,
+				905650EE18CFB7950000EF2A /* GGCell.h */,
+				905650EF18CFB7950000EF2A /* GGCell.m */,
+				905650F418CFBFE80000EF2A /* GGTableViewCellDelegate.h */,
+			);
+			path = GroceryGoblin;
+			sourceTree = "<group>";
+		};
+		9091025A188B2AFB00F488DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9091025B188B2AFB00F488DA /* GroceryGoblin-Info.plist */,
+				9091025C188B2AFB00F488DA /* InfoPlist.strings */,
+				9091025F188B2AFB00F488DA /* main.m */,
+				90910261188B2AFB00F488DA /* GroceryGoblin-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9091027B188B2AFC00F488DA /* GroceryGoblinTests */ = {
+			isa = PBXGroup;
+			children = (
+				90910281188B2AFC00F488DA /* GroceryGoblinTests.m */,
+				9091027C188B2AFC00F488DA /* Supporting Files */,
+			);
+			path = GroceryGoblinTests;
+			sourceTree = "<group>";
+		};
+		9091027C188B2AFC00F488DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9091027D188B2AFC00F488DA /* GroceryGoblinTests-Info.plist */,
+				9091027E188B2AFC00F488DA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9091024F188B2AFB00F488DA /* GroceryGoblin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90910285188B2AFC00F488DA /* Build configuration list for PBXNativeTarget "GroceryGoblin" */;
+			buildPhases = (
+				9091024C188B2AFB00F488DA /* Sources */,
+				9091024D188B2AFB00F488DA /* Frameworks */,
+				9091024E188B2AFB00F488DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GroceryGoblin;
+			productName = GroceryGoblin;
+			productReference = 90910250188B2AFB00F488DA /* GroceryGoblin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		90910273188B2AFC00F488DA /* GroceryGoblinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90910288188B2AFC00F488DA /* Build configuration list for PBXNativeTarget "GroceryGoblinTests" */;
+			buildPhases = (
+				90910270188B2AFC00F488DA /* Sources */,
+				90910271188B2AFC00F488DA /* Frameworks */,
+				90910272188B2AFC00F488DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9091027A188B2AFC00F488DA /* PBXTargetDependency */,
+			);
+			name = GroceryGoblinTests;
+			productName = GroceryGoblinTests;
+			productReference = 90910274188B2AFC00F488DA /* GroceryGoblinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90910248188B2AFB00F488DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GG;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = MorganJoshEvan;
+				TargetAttributes = {
+					90910273188B2AFC00F488DA = {
+						TestTargetID = 9091024F188B2AFB00F488DA;
+					};
+				};
+			};
+			buildConfigurationList = 9091024B188B2AFB00F488DA /* Build configuration list for PBXProject "GroceryGoblin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 90910247188B2AFB00F488DA;
+			productRefGroup = 90910251188B2AFB00F488DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9091024F188B2AFB00F488DA /* GroceryGoblin */,
+				90910273188B2AFC00F488DA /* GroceryGoblinTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9091024E188B2AFB00F488DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9091026A188B2AFB00F488DA /* Main_iPad.storyboard in Resources */,
+				9091026F188B2AFB00F488DA /* Images.xcassets in Resources */,
+				90910267188B2AFB00F488DA /* Main_iPhone.storyboard in Resources */,
+				9091025E188B2AFB00F488DA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90910272188B2AFC00F488DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90910280188B2AFC00F488DA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9091024C188B2AFB00F488DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9091028D188B2B9800F488DA /* GGShoppingItem.m in Sources */,
+				90910264188B2AFB00F488DA /* GGAppDelegate.m in Sources */,
+				9091026D188B2AFB00F488DA /* GGViewController.m in Sources */,
+				905650F018CFB7950000EF2A /* GGCell.m in Sources */,
+				90910260188B2AFB00F488DA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90910270188B2AFC00F488DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90910282188B2AFC00F488DA /* GroceryGoblinTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9091027A188B2AFC00F488DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9091024F188B2AFB00F488DA /* GroceryGoblin */;
+			targetProxy = 90910279188B2AFC00F488DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9091025C188B2AFB00F488DA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9091025D188B2AFB00F488DA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		90910265188B2AFB00F488DA /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90910266188B2AFB00F488DA /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		90910268188B2AFB00F488DA /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90910269188B2AFB00F488DA /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		9091027E188B2AFC00F488DA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9091027F188B2AFC00F488DA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		90910283188B2AFC00F488DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		90910284188B2AFC00F488DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90910286188B2AFC00F488DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GroceryGoblin/GroceryGoblin-Prefix.pch";
+				INFOPLIST_FILE = "GroceryGoblin/GroceryGoblin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		90910287188B2AFC00F488DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GroceryGoblin/GroceryGoblin-Prefix.pch";
+				INFOPLIST_FILE = "GroceryGoblin/GroceryGoblin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		90910289188B2AFC00F488DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GroceryGoblin.app/GroceryGoblin";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GroceryGoblin/GroceryGoblin-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GroceryGoblinTests/GroceryGoblinTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9091028A188B2AFC00F488DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GroceryGoblin.app/GroceryGoblin";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GroceryGoblin/GroceryGoblin-Prefix.pch";
+				INFOPLIST_FILE = "GroceryGoblinTests/GroceryGoblinTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9091024B188B2AFB00F488DA /* Build configuration list for PBXProject "GroceryGoblin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90910283188B2AFC00F488DA /* Debug */,
+				90910284188B2AFC00F488DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90910285188B2AFC00F488DA /* Build configuration list for PBXNativeTarget "GroceryGoblin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90910286188B2AFC00F488DA /* Debug */,
+				90910287188B2AFC00F488DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90910288188B2AFC00F488DA /* Build configuration list for PBXNativeTarget "GroceryGoblinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90910289188B2AFC00F488DA /* Debug */,
+				9091028A188B2AFC00F488DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90910248188B2AFB00F488DA /* Project object */;
+}
