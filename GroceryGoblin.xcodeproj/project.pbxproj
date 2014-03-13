@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		038D5AC918D2325100B6EA92 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D5AC818D2325100B6EA92 /* Parse.framework */; };
+		038D5ACB18D232D400B6EA92 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D5ACA18D232D400B6EA92 /* AudioToolbox.framework */; };
+		038D5ACD18D232DC00B6EA92 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D5ACC18D232DC00B6EA92 /* CFNetwork.framework */; };
+		038D5ACF18D232E700B6EA92 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D5ACE18D232E700B6EA92 /* CoreLocation.framework */; };
+		038D5AD118D2330300B6EA92 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D5AD018D2330300B6EA92 /* libz.dylib */; };
+		038D5AD318D2331400B6EA92 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D5AD218D2331300B6EA92 /* MobileCoreServices.framework */; };
+		038D5AD518D2332600B6EA92 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D5AD418D2332600B6EA92 /* Security.framework */; };
+		038D5AD718D2333000B6EA92 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D5AD618D2333000B6EA92 /* StoreKit.framework */; };
+		038D5AD918D2333C00B6EA92 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D5AD818D2333C00B6EA92 /* SystemConfiguration.framework */; };
+		038D5ADC18D23FF800B6EA92 /* GGShoppingList.m in Sources */ = {isa = PBXBuildFile; fileRef = 038D5ADB18D23FF800B6EA92 /* GGShoppingList.m */; };
 		905650F018CFB7950000EF2A /* GGCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 905650EF18CFB7950000EF2A /* GGCell.m */; };
 		905650F218CFB9B00000EF2A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 905650F118CFB9B00000EF2A /* QuartzCore.framework */; };
 		90910254188B2AFB00F488DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90910253188B2AFB00F488DA /* Foundation.framework */; };
@@ -38,6 +48,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		038D5AC818D2325100B6EA92 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = GroceryGoblin/Parse.framework; sourceTree = "<group>"; };
+		038D5ACA18D232D400B6EA92 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		038D5ACC18D232DC00B6EA92 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		038D5ACE18D232E700B6EA92 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		038D5AD018D2330300B6EA92 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		038D5AD218D2331300B6EA92 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		038D5AD418D2332600B6EA92 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		038D5AD618D2333000B6EA92 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		038D5AD818D2333C00B6EA92 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		038D5ADA18D23FF800B6EA92 /* GGShoppingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGShoppingList.h; sourceTree = "<group>"; };
+		038D5ADB18D23FF800B6EA92 /* GGShoppingList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGShoppingList.m; sourceTree = "<group>"; };
 		905650EE18CFB7950000EF2A /* GGCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGCell.h; sourceTree = "<group>"; };
 		905650EF18CFB7950000EF2A /* GGCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGCell.m; sourceTree = "<group>"; };
 		905650F118CFB9B00000EF2A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -71,10 +92,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				038D5AD918D2333C00B6EA92 /* SystemConfiguration.framework in Frameworks */,
+				038D5AD718D2333000B6EA92 /* StoreKit.framework in Frameworks */,
+				038D5AD518D2332600B6EA92 /* Security.framework in Frameworks */,
+				038D5AD318D2331400B6EA92 /* MobileCoreServices.framework in Frameworks */,
+				038D5AD118D2330300B6EA92 /* libz.dylib in Frameworks */,
+				038D5ACF18D232E700B6EA92 /* CoreLocation.framework in Frameworks */,
+				038D5ACD18D232DC00B6EA92 /* CFNetwork.framework in Frameworks */,
+				038D5ACB18D232D400B6EA92 /* AudioToolbox.framework in Frameworks */,
 				905650F218CFB9B00000EF2A /* QuartzCore.framework in Frameworks */,
 				90910256188B2AFB00F488DA /* CoreGraphics.framework in Frameworks */,
 				90910258188B2AFB00F488DA /* UIKit.framework in Frameworks */,
 				90910254188B2AFB00F488DA /* Foundation.framework in Frameworks */,
+				038D5AC918D2325100B6EA92 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +143,15 @@
 		90910252188B2AFB00F488DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				038D5AD818D2333C00B6EA92 /* SystemConfiguration.framework */,
+				038D5AD618D2333000B6EA92 /* StoreKit.framework */,
+				038D5AD418D2332600B6EA92 /* Security.framework */,
+				038D5AD218D2331300B6EA92 /* MobileCoreServices.framework */,
+				038D5AD018D2330300B6EA92 /* libz.dylib */,
+				038D5ACE18D232E700B6EA92 /* CoreLocation.framework */,
+				038D5ACC18D232DC00B6EA92 /* CFNetwork.framework */,
+				038D5ACA18D232D400B6EA92 /* AudioToolbox.framework */,
+				038D5AC818D2325100B6EA92 /* Parse.framework */,
 				905650F118CFB9B00000EF2A /* QuartzCore.framework */,
 				90910253188B2AFB00F488DA /* Foundation.framework */,
 				90910255188B2AFB00F488DA /* CoreGraphics.framework */,
@@ -135,6 +174,8 @@
 				9091025A188B2AFB00F488DA /* Supporting Files */,
 				9091028B188B2B9800F488DA /* GGShoppingItem.h */,
 				9091028C188B2B9800F488DA /* GGShoppingItem.m */,
+				038D5ADA18D23FF800B6EA92 /* GGShoppingList.h */,
+				038D5ADB18D23FF800B6EA92 /* GGShoppingList.m */,
 				905650EE18CFB7950000EF2A /* GGCell.h */,
 				905650EF18CFB7950000EF2A /* GGCell.m */,
 				905650F418CFBFE80000EF2A /* GGTableViewCellDelegate.h */,
@@ -271,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9091028D188B2B9800F488DA /* GGShoppingItem.m in Sources */,
+				038D5ADC18D23FF800B6EA92 /* GGShoppingList.m in Sources */,
 				90910264188B2AFB00F488DA /* GGAppDelegate.m in Sources */,
 				9091026D188B2AFB00F488DA /* GGViewController.m in Sources */,
 				905650F018CFB7950000EF2A /* GGCell.m in Sources */,
@@ -411,6 +453,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/josh/grocerygoblin/GroceryGoblin,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GroceryGoblin/GroceryGoblin-Prefix.pch";
 				INFOPLIST_FILE = "GroceryGoblin/GroceryGoblin-Info.plist";
@@ -424,6 +470,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/josh/grocerygoblin/GroceryGoblin,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GroceryGoblin/GroceryGoblin-Prefix.pch";
 				INFOPLIST_FILE = "GroceryGoblin/GroceryGoblin-Info.plist";

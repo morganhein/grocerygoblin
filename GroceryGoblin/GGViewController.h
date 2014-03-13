@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GGTableViewCellDelegate.h"
+#import <Parse/Parse.h>
 
 @interface GGViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, GGTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *itemsTableView;

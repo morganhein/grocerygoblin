@@ -35,6 +35,10 @@
     self.itemsTableView.backgroundColor = [UIColor blackColor];
     
     self.createNewItemTextField.delegate = (id)self;
+    
+    PFObject *testObject = [PFObject objectWithClassName:@"shoppingList"];
+    
+    [testObject saveInBackground];
 }
 
 - (void)didReceiveMemoryWarning
