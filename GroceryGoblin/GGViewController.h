@@ -13,6 +13,16 @@
 @interface GGViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, GGTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *itemsTableView;
 @property (weak, nonatomic) IBOutlet UITextField *createNewItemTextField;
+@property (strong, nonatomic) NSMutableArray *displayList;
+
+
+//these are objects for parse stuff
+@property (nonatomic, strong) PFObject *list;
+@property (nonatomic, strong) NSMutableArray *items;
+
+
+
+
 - (IBAction)createNewItemTextField:(UITextField *)sender;
 
 @end

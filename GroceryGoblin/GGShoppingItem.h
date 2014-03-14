@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
 @interface GGShoppingItem : NSObject
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic) NSNumber *quantity;
 @property (nonatomic) BOOL purchased;
+@property (nonatomic, strong) PFObject *itemParseObject;
 
 -(id)initItemWithName:(NSString *)name andQuantity:(NSNumber *)quantity;
 +(id)shoppingItemWithName:(NSString *)name andQuantity:(NSNumber *)quantity;

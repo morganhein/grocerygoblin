@@ -171,7 +171,6 @@
 				9091026B188B2AFB00F488DA /* GGViewController.h */,
 				9091026C188B2AFB00F488DA /* GGViewController.m */,
 				9091026E188B2AFB00F488DA /* Images.xcassets */,
-				9091025A188B2AFB00F488DA /* Supporting Files */,
 				9091028B188B2B9800F488DA /* GGShoppingItem.h */,
 				9091028C188B2B9800F488DA /* GGShoppingItem.m */,
 				038D5ADA18D23FF800B6EA92 /* GGShoppingList.h */,
@@ -179,6 +178,7 @@
 				905650EE18CFB7950000EF2A /* GGCell.h */,
 				905650EF18CFB7950000EF2A /* GGCell.m */,
 				905650F418CFBFE80000EF2A /* GGTableViewCellDelegate.h */,
+				9091025A188B2AFB00F488DA /* Supporting Files */,
 			);
 			path = GroceryGoblin;
 			sourceTree = "<group>";

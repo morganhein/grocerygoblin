@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GGShoppingItem.h"
+
 
 @interface GGShoppingList : NSObject
+
+@property (nonatomic, strong) NSMutableArray *listItems;
+
+//-(void) addItemToList:(GGShoppingItem *)item;
+//-(void) removeItemFromList:(GG ShoppingItem* )item;
+
+
+
 
 @end
