@@ -38,7 +38,13 @@ NSMutableArray *_shoppingItems;
     
     
     self.displayList = [[NSMutableArray alloc] init];
-    PFUser *user = [PFUser currentUser];
+    PFUser *user;
+    if([PFUser currentUser] != NULL){
+        user = [PFUser currentUser];
+    }else{
+        user = [PFUser logInWithUsername:@"Josh" password:@"plaintextfolyfe"];
+    }
+    
     PFQuery *query = [PFQuery queryWithClassName:@"ShoppingList"];
     PFQuery *itemQuery = [PFQuery queryWithClassName:@"ListItem"];
     [itemQuery orderByDescending:@"createdAt"];
