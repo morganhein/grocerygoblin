@@ -16,7 +16,6 @@
 		038D5AD518D2332600B6EA92 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D5AD418D2332600B6EA92 /* Security.framework */; };
 		038D5AD718D2333000B6EA92 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D5AD618D2333000B6EA92 /* StoreKit.framework */; };
 		038D5AD918D2333C00B6EA92 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D5AD818D2333C00B6EA92 /* SystemConfiguration.framework */; };
-		038D5ADC18D23FF800B6EA92 /* GGShoppingList.m in Sources */ = {isa = PBXBuildFile; fileRef = 038D5ADB18D23FF800B6EA92 /* GGShoppingList.m */; };
 		905650F018CFB7950000EF2A /* GGCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 905650EF18CFB7950000EF2A /* GGCell.m */; };
 		905650F218CFB9B00000EF2A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 905650F118CFB9B00000EF2A /* QuartzCore.framework */; };
 		90910254188B2AFB00F488DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90910253188B2AFB00F488DA /* Foundation.framework */; };
@@ -57,8 +56,6 @@
 		038D5AD418D2332600B6EA92 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		038D5AD618D2333000B6EA92 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		038D5AD818D2333C00B6EA92 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		038D5ADA18D23FF800B6EA92 /* GGShoppingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGShoppingList.h; sourceTree = "<group>"; };
-		038D5ADB18D23FF800B6EA92 /* GGShoppingList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGShoppingList.m; sourceTree = "<group>"; };
 		905650EE18CFB7950000EF2A /* GGCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGCell.h; sourceTree = "<group>"; };
 		905650EF18CFB7950000EF2A /* GGCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGCell.m; sourceTree = "<group>"; };
 		905650F118CFB9B00000EF2A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -173,8 +170,6 @@
 				9091026E188B2AFB00F488DA /* Images.xcassets */,
 				9091028B188B2B9800F488DA /* GGShoppingItem.h */,
 				9091028C188B2B9800F488DA /* GGShoppingItem.m */,
-				038D5ADA18D23FF800B6EA92 /* GGShoppingList.h */,
-				038D5ADB18D23FF800B6EA92 /* GGShoppingList.m */,
 				905650EE18CFB7950000EF2A /* GGCell.h */,
 				905650EF18CFB7950000EF2A /* GGCell.m */,
 				905650F418CFBFE80000EF2A /* GGTableViewCellDelegate.h */,
@@ -312,7 +307,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9091028D188B2B9800F488DA /* GGShoppingItem.m in Sources */,
-				038D5ADC18D23FF800B6EA92 /* GGShoppingList.m in Sources */,
 				90910264188B2AFB00F488DA /* GGAppDelegate.m in Sources */,
 				9091026D188B2AFB00F488DA /* GGViewController.m in Sources */,
 				905650F018CFB7950000EF2A /* GGCell.m in Sources */,
