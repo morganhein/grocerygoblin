@@ -43,7 +43,7 @@
     UIButton *aboutBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [aboutBtn addTarget:self action:@selector(showAboutPage) forControlEvents:UIControlEventTouchUpInside];
     //[aboutBtn setTitle:@"Login" forState:UIControlStateNormal];
-    [aboutBtn setFrame:CGRectMake(115.0, 260.0, 90.0, 35.0)];
+    [aboutBtn setFrame:CGRectMake(120.0, 270.0, 80.0, 35.0)];
     [aboutBtn setBackgroundImage:btn forState:UIControlStateNormal];
     [aboutBtn setBackgroundImage:btnh forState:UIControlStateHighlighted];
     [aboutBtn.titleLabel setFont:buttonFont];
@@ -56,7 +56,7 @@
     UIButton *newuser = [UIButton buttonWithType:UIButtonTypeCustom];
     [newuser addTarget:self action:@selector(newuserPage) forControlEvents:UIControlEventTouchUpInside];
     //[aboutBtn setTitle:@"Login" forState:UIControlStateNormal];
-    [newuser setFrame:CGRectMake(102.0, 330.0, 120.0, 30.0)];
+    [newuser setFrame:CGRectMake(103.0, 330.0, 120.0, 30.0)];
     [newuser setBackgroundImage:newbtn forState:UIControlStateNormal];
     [newuser setBackgroundImage:newbtnh forState:UIControlStateHighlighted];
     [newuser.titleLabel setFont:buttonFont];
@@ -69,8 +69,21 @@
 }
 
 - (void) newuserPage {
-    NSLog(@"SignUp!")
-    ;}
+    PFUser *user = [PFUser user];
+    user.username = self.userName.text;
+    user.password = self.passWord.text;
+    
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            NSLog(@"Worked");
+            // Hooray! Let them use the app now.
+        } else {
+            NSString *errorString = [error userInfo][@"error"];
+            NSLog(errorString);
+            // Show the errorString somewhere and let the user try again.
+        }
+    }];
+    NSLog(@"Trying to add new user");    ;}
 
 //this runs the button I made, the green login button
 - (void)showAboutPage
@@ -128,9 +141,10 @@
     }
 }
 
+//moved the commented out code up to my other method. Left the button just in case
 - (IBAction)newUserButton:(UIButton *)sender {
     
-    PFUser *user = [PFUser user];
+    /*PFUser *user = [PFUser user];
     user.username = self.userName.text;	
     user.password = self.passWord.text;
     
@@ -144,7 +158,7 @@
             // Show the errorString somewhere and let the user try again.
         }
     }];
-    NSLog(@"Trying to add new user");
+    NSLog(@"Trying to add new user");*/
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
