@@ -10,11 +10,15 @@
 #import <Parse/Parse.h>
 
 @interface GGSingleton : NSObject {
-    PFUser *user;
-    NSMutableArray *lists;
+    NSMutableDictionary *items;
+//    NSObject *currentList;
+//    PFUser *user;
+//    NSMutableArray *lists;
 }
-@property (strong, nonatomic) PFUser *user;
-@property (strong, nonatomic) NSMutableArray *lists;
+//@property (strong, nonatomic) PFUser *user;
+//@property (strong, nonatomic) NSMutableArray *lists;
+//@property (strong, nonatomic) NSObject *currentList;
+@property (strong, nonatomic) NSMutableDictionary *items;
 +(id)sharedData;
 
 @end

@@ -13,5 +13,6 @@
 
 -(void) itemCompleted:(NSObject *)item;
 -(void) itemAdded:(NSObject *)item;
+-(void) doubleTap:(NSObject *)item;
 
 @end

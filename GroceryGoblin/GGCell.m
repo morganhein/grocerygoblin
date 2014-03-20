@@ -22,6 +22,11 @@
         recognizer.delegate = self;
         [self addGestureRecognizer:recognizer];
         //NSLog(@"Entered init for initWithStyle");
+        
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+        tapGesture.delegate = self;
+        tapGesture.numberOfTapsRequired = 2;
+        [self addGestureRecognizer:tapGesture];
     }
     return self;
 }
@@ -33,9 +38,20 @@
     // Configure the view for the selected state
 }
 
--(BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer {
-    CGPoint translation = [gestureRecognizer translationInView:[self superview]];
-    if (fabsf(translation.x) > fabsf(translation.y)) {
+- (void)handleTapGesture:(UITapGestureRecognizer *)sender {
+    if (sender.state == UIGestureRecognizerStateRecognized) {
+        NSLog(@"Always double tap");
+        [self.delegate doubleTap:self.item];
+    }
+}
+
+-(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    if([gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]]){
+        CGPoint translation = [(UIPanGestureRecognizer *)gestureRecognizer translationInView:[self superview]];
+        if (fabsf(translation.x) > fabsf(translation.y)) {
+            return YES;
+        }
+    } else if([gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]]){
         return YES;
     }
     return NO;

@@ -42,7 +42,7 @@
     
     
     UIButton *aboutBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [aboutBtn addTarget:self action:@selector(showAboutPage) forControlEvents:UIControlEventTouchUpInside];
+    [aboutBtn addTarget:self action:@selector(showListsPage) forControlEvents:UIControlEventTouchUpInside];
     //[aboutBtn setTitle:@"Login" forState:UIControlStateNormal];
     [aboutBtn setFrame:CGRectMake(120.0, 270.0, 80.0, 35.0)];
     [aboutBtn setBackgroundImage:btn forState:UIControlStateNormal];
@@ -73,37 +73,32 @@
     PFUser *user = [PFUser user];
     user.username = self.userName.text;
     user.password = self.passWord.text;
-    
+    NSLog(@"Trying to add new user");
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
-            NSLog(@"Worked");
-            // Hooray! Let them use the app now.
+            [self showListsPage];
         } else {
             NSString *errorString = [error userInfo][@"error"];
-            NSLog(errorString);
+//            NSLog(errorString);
             // Show the errorString somewhere and let the user try again.
         }
     }];
-    NSLog(@"Trying to add new user");    ;}
+}
 
 //this runs the button I made, the green login button
-- (void)showAboutPage
+- (void)showListsPage
 {
-  
     PFUser *user = [PFUser user];
-     user = [PFUser logInWithUsername:self.userName.text password:self.passWord.text];
+    user = [PFUser logInWithUsername:self.userName.text password:self.passWord.text];
     if (user) {
         NSLog(@"Success");
         GGSingleton *singletonData = [GGSingleton sharedData];
-        singletonData.user = user;
+        [singletonData.items setObject:user forKey:@"user"];
         [self performSegueWithIdentifier:@"toLists" sender:self];
 
      } else {
-     NSLog(@"Error");
+         NSLog(@"Error");
      }
-    
-    
-    
 }
 
 
@@ -117,7 +112,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"toLists"]) {
         GGListsViewController *con = (GGListsViewController *)segue.destinationViewController;
-        con.user = self.user;
+//        con.user = self.user;
     }
 }
 

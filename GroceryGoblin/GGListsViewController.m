@@ -10,6 +10,7 @@
 #import "GGCell.h"
 #import "GGShoppingList.h"
 #import "GGSingleton.h"
+#import "GGItemsViewController.h"
 
 @interface GGListsViewController ()
 
@@ -18,14 +19,14 @@
 @implementation GGListsViewController
 
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+//{
+//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+//    if (self) {
+//        // Custom initialization
+//    }
+//    return self;
+//}
 
 - (void)viewDidLoad
 {
@@ -33,8 +34,9 @@
 	// Do any additional setup after loading the view.
     
     //Load the Data Singleton
-    GGSingleton *singletonData = [GGSingleton sharedData];
-    self.user = singletonData.user;
+    self.singleton = [GGSingleton sharedData];
+    self.user = [self.singleton.items valueForKey:@"user"];
+
     
     //Query Parse for our shopping lists
     PFQuery *query = [PFQuery queryWithClassName:@"ShoppingList"];
@@ -51,11 +53,16 @@
     }
     
     //Instantiate the tableview methods
-    self.tableView.dataSource = (id)self;
+    self.tableView.dataSource = self;
     [self.tableView registerClass:[GGCell class] forCellReuseIdentifier:@"cell"];
-    self.tableView.delegate = (id)self;
+    
+    self.tableView.delegate = self;
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     self.tableView.backgroundColor = [UIColor blackColor];
+    
+    //Set the new text field delegate
+    self.createNewList.delegate = (id)self;
+
 }
 
 //    self.lists = [query findObjects];
@@ -67,10 +74,9 @@
 }
 
 
-
--(void)itemCompleted:(GGShoppingItem *)shopItem {
-    // use the UITableView to animate the removal of this row
-
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -101,4 +107,57 @@
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     cell.backgroundColor = [self colorForIndex:indexPath.row];
 }
+
+- (IBAction)createNewList:(UITextField *)sender {
+    NSLog(@"Creating new list");
+    GGShoppingList *list = [[GGShoppingList alloc] initWithName:self.createNewList.text];
+    [self itemAdded:list];
+}
+
+-(void)itemCompleted:(NSObject *)obj {
+    // use the UITableView to animate the removal of this row
+    GGShoppingList *listItem = (GGShoppingList *)obj;
+    NSUInteger index = [self.lists indexOfObject:listItem];
+    
+    [self.tableView beginUpdates];
+    [self.lists removeObject:listItem];
+    [listItem.itemParseObject deleteInBackground];
+    [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:index inSection:0]]
+                               withRowAnimation:UITableViewRowAnimationFade];
+    [self.tableView endUpdates];
+}
+
+-(void)itemAdded:(GGShoppingList *)listItem {
+    [self.tableView beginUpdates];
+    [self.lists insertObject:(GGShoppingList* )listItem atIndex:0];
+    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]]withRowAnimation:UITableViewRowAnimationTop];
+    [self.tableView endUpdates];
+}
+
+-(void)doubleTap:(NSObject *)obj {
+    NSLog(@"You double tapped");
+    self.nextList = (GGShoppingList *)obj;
+    [self performSegueWithIdentifier:@"toItems" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"toItems"]) {
+//        GGItemsViewController *con = (GGItemsViewController *)segue.destinationViewController;
+////        con.gglist = self.nextList;
+        [self.singleton.items setObject:self.nextList forKey:@"currentList"];
+//        [self.singleton.items setValue:self.nextList forKey:@"currentList"];`
+    }
+}
+
+-(void) addUser:(PFUser *)user toList:(PFObject *)list{
+    [list addObject:user.objectId forKey:@"users"];
+}
+//PFObject *newItem = [PFObject objectWithClassName:@"ListItem"];
+//[newItem setObject:[PFUser currentUser] forKey:@"createdBy"];
+//newItem[@"name"] = shopItem.name;
+//newItem[@"quantity"] = shopItem.quantity;
+//[newItem setObject:self.list forKey:@"ShoppingList"];
+//shopItem.itemParseObject = newItem;
+//[newItem saveInBackground];
+
 @end

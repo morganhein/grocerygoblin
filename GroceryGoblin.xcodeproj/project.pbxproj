@@ -28,7 +28,7 @@
 		90910264188B2AFB00F488DA /* GGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90910263188B2AFB00F488DA /* GGAppDelegate.m */; };
 		90910267188B2AFB00F488DA /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90910265188B2AFB00F488DA /* Main_iPhone.storyboard */; };
 		9091026A188B2AFB00F488DA /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90910268188B2AFB00F488DA /* Main_iPad.storyboard */; };
-		9091026D188B2AFB00F488DA /* GGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9091026C188B2AFB00F488DA /* GGViewController.m */; };
+		9091026D188B2AFB00F488DA /* GGItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9091026C188B2AFB00F488DA /* GGItemsViewController.m */; };
 		9091026F188B2AFB00F488DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9091026E188B2AFB00F488DA /* Images.xcassets */; };
 		90910276188B2AFC00F488DA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90910275188B2AFC00F488DA /* XCTest.framework */; };
 		90910277188B2AFC00F488DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90910253188B2AFB00F488DA /* Foundation.framework */; };
@@ -88,8 +88,8 @@
 		90910263188B2AFB00F488DA /* GGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGAppDelegate.m; sourceTree = "<group>"; };
 		90910266188B2AFB00F488DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		90910269188B2AFB00F488DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		9091026B188B2AFB00F488DA /* GGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGViewController.h; sourceTree = "<group>"; };
-		9091026C188B2AFB00F488DA /* GGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGViewController.m; sourceTree = "<group>"; };
+		9091026B188B2AFB00F488DA /* GGItemsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGItemsViewController.h; sourceTree = "<group>"; };
+		9091026C188B2AFB00F488DA /* GGItemsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGItemsViewController.m; sourceTree = "<group>"; };
 		9091026E188B2AFB00F488DA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		90910274188B2AFC00F488DA /* GroceryGoblinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroceryGoblinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90910275188B2AFC00F488DA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -147,6 +147,8 @@
 		9038066B18DAE51E003B2F26 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				9D98625F18DB5198005E3784 /* GGSingleton.h */,
+				9D98626018DB5198005E3784 /* GGSingleton.m */,
 				9091028B188B2B9800F488DA /* GGShoppingItem.h */,
 				9091028C188B2B9800F488DA /* GGShoppingItem.m */,
 				9038066818DAE50F003B2F26 /* GGShoppingList.h */,
@@ -164,10 +166,8 @@
 				9038066318DAC016003B2F26 /* GGLoginViewController.m */,
 				9038066518DACC2D003B2F26 /* GGListsViewController.h */,
 				9038066618DACC2D003B2F26 /* GGListsViewController.m */,
-				9D98625F18DB5198005E3784 /* GGSingleton.h */,
-				9D98626018DB5198005E3784 /* GGSingleton.m */,
-				9091026B188B2AFB00F488DA /* GGViewController.h */,
-				9091026C188B2AFB00F488DA /* GGViewController.m */,
+				9091026B188B2AFB00F488DA /* GGItemsViewController.h */,
+				9091026C188B2AFB00F488DA /* GGItemsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -374,7 +374,7 @@
 				9091028D188B2B9800F488DA /* GGShoppingItem.m in Sources */,
 				90910264188B2AFB00F488DA /* GGAppDelegate.m in Sources */,
 				9038066718DACC2D003B2F26 /* GGListsViewController.m in Sources */,
-				9091026D188B2AFB00F488DA /* GGViewController.m in Sources */,
+				9091026D188B2AFB00F488DA /* GGItemsViewController.m in Sources */,
 				9D98626118DB5198005E3784 /* GGSingleton.m in Sources */,
 				9038066A18DAE50F003B2F26 /* GGShoppingList.m in Sources */,
 				905650F018CFB7950000EF2A /* GGCell.m in Sources */,

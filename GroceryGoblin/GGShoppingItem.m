@@ -9,6 +9,7 @@
 #import "GGShoppingItem.h"
 
 @implementation GGShoppingItem
+
 -(id)initItemWithName:(NSString *)name andQuantity:(NSNumber *)quantity {
     if (self == [super init]) {
         self.name = name;

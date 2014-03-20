@@ -21,8 +21,10 @@
 -(id)init {
     if (self = [super init])
     {
-        user = [[PFUser alloc] init];
-        lists = [[NSMutableArray alloc] init];
+        self.items = [[NSMutableDictionary alloc] initWithCapacity:3];
+//        currentList = [[NSObject alloc] init];
+//        user = [[PFUser alloc] init];
+//        lists = [[NSMutableArray alloc] init];
     }
     return self;
 }

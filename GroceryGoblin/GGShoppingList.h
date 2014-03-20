@@ -12,9 +12,10 @@
 @interface GGShoppingList : NSObject
 
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *identifer;
+@property (nonatomic, strong) NSString *identifier;
 @property (nonatomic) BOOL completed;
+@property (nonatomic, strong) PFObject *itemParseObject;
 -(id)initFromObject:(PFObject *)list;
--(id)init:(PFObject *)list;
+-(id)initWithName:(NSString *)name;
 
 @end
