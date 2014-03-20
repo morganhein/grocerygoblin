@@ -44,14 +44,22 @@
     user = [PFUser logInWithUsername:self.userName.text password:self.passWord.text];
     if (user) {
         NSLog(@"Success");
-        listsViewController = [[GGListsViewController alloc] initWithNibName:nil bundle:Nil];
-        listsViewController.passedUser = user;
-        [self.view addSubview:listsViewController.view];
+        self.user = user;
+//        listsViewController = [[GGListsViewController alloc] initWithNibName:@"GGListsViewController" bundle:Nil];
+//        self.user;
+//        [self.navigationController pushViewController:listsViewController animated:YES];
 //self.listsViewController = [[GGListsViewController alloc] init];
 //        [self presentViewController:self.listsViewController animated:YES completion:nil];
 //        [self presentViewController:self.listsViewController animated:YES completion:nil];
     } else {
         NSLog(@"Error");
+    }
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"toLists"]) {
+        GGListsViewController *con = (GGListsViewController *)segue.destinationViewController;
+        con.user = self.user;
     }
 }
 

@@ -13,10 +13,10 @@
 
 @interface GGListsViewController : UIViewController
 {
-    PFUser *passedUser;
+//    PFUser *passedUser;
 }
-@property (weak, nonatomic) PFUser *user;
-@property (weak, nonatomic) PFUser *passedUser;
+@property (strong, nonatomic) PFUser *user;
+//@property (weak, nonatomic) PFUser *passedUser;
 @property (strong, nonatomic) NSMutableArray *lists;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

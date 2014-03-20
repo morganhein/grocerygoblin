@@ -30,7 +30,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.user = self.passedUser;
+//    self.user = self->passedUser;
     PFQuery *query = [PFQuery queryWithClassName:@"ShoppingList"];
     [query whereKey:@"users" equalTo:self.user.objectId];
     
@@ -52,6 +52,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
+-(void)itemCompleted:(GGShoppingItem *)shopItem {
+    // use the UITableView to animate the removal of this row
+
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.lists.count;
 }
@@ -62,15 +69,22 @@
     int index = [indexPath row];
     GGShoppingList *list = self.lists[index];
     cell.textLabel.text = list.name;
-    cell.delegate = self;
+    cell.delegate = (id)self;
     cell.item = list;
     return cell;
 }
 
--(void)itemCompleted:(GGShoppingItem *)shopItem {
-    // use the UITableView to animate the removal of this row
-
+-(UIColor *)colorForIndex:(NSInteger) index {
+    NSUInteger iCount = self.lists.count - 1;
+    float value = ((float)index / (float)iCount) * 0.6;
+    return [UIColor colorWithRed:0 green:1 blue:value alpha:0.9];
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50.0f;
+}
 
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    cell.backgroundColor = [self colorForIndex:indexPath.row];
+}
 @end
