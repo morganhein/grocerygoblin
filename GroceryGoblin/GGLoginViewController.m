@@ -9,6 +9,7 @@
 #import "GGLoginViewController.h"
 #import <Parse/Parse.h>
 #import "GGListsViewController.h"
+#import "GGSingleton.h"
 
 @interface GGLoginViewController ()
 
@@ -91,15 +92,12 @@
   
     PFUser *user = [PFUser user];
      user = [PFUser logInWithUsername:self.userName.text password:self.passWord.text];
-     if (user) {
-     NSLog(@"Success");
-     self.user = user;
-     //        listsViewController = [[GGListsViewController alloc] initWithNibName:@"GGListsViewController" bundle:Nil];
-     //        listsViewController.user = self.user;
-     //        [self presentViewController:listsViewController animated:YES completion:nil];
-     //        [self.navigationController pushViewController:listsViewController animated:YES];
-     //        self.listsViewController = [[GGListsViewController alloc] init];
-     //        [self presentViewController:self.listsViewController animated:YES completion:nil];
+    if (user) {
+        NSLog(@"Success");
+        GGSingleton *singletonData = [GGSingleton sharedData];
+        singletonData.user = user;
+        [self performSegueWithIdentifier:@"toLists" sender:self];
+
      } else {
      NSLog(@"Error");
      }
@@ -116,49 +114,11 @@
 }
 
 
-//commented this out to test other functionality of other button, this button should still work if we wanna go back to it
-- (IBAction)loginButton:(UIButton *)sender {
-    /*PFUser *user = [PFUser user];
-    user = [PFUser logInWithUsername:self.userName.text password:self.passWord.text];
-    if (user) {
-        NSLog(@"Success");
-        self.user = user;
-//        listsViewController = [[GGListsViewController alloc] initWithNibName:@"GGListsViewController" bundle:Nil];
-//        listsViewController.user = self.user;
-//        [self presentViewController:listsViewController animated:YES completion:nil];
-//        [self.navigationController pushViewController:listsViewController animated:YES];
-//        self.listsViewController = [[GGListsViewController alloc] init];
-//        [self presentViewController:self.listsViewController animated:YES completion:nil];
-    } else {
-        NSLog(@"Error");
-    }*/
-}
-
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"toLists"]) {
         GGListsViewController *con = (GGListsViewController *)segue.destinationViewController;
         con.user = self.user;
     }
-}
-
-//moved the commented out code up to my other method. Left the button just in case
-- (IBAction)newUserButton:(UIButton *)sender {
-    
-    /*PFUser *user = [PFUser user];
-    user.username = self.userName.text;	
-    user.password = self.passWord.text;
-    
-    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error) {
-            NSLog(@"Worked");
-            // Hooray! Let them use the app now.
-        } else {
-            NSString *errorString = [error userInfo][@"error"];
-            NSLog(errorString);
-            // Show the errorString somewhere and let the user try again.
-        }
-    }];
-    NSLog(@"Trying to add new user");*/
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {

@@ -9,6 +9,7 @@
 #import "GGListsViewController.h"
 #import "GGCell.h"
 #import "GGShoppingList.h"
+#import "GGSingleton.h"
 
 @interface GGListsViewController ()
 
@@ -30,10 +31,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-//    self.user = self->passedUser;
+    
+    //Load the Data Singleton
+    GGSingleton *singletonData = [GGSingleton sharedData];
+    self.user = singletonData.user;
+    
+    //Query Parse for our shopping lists
     PFQuery *query = [PFQuery queryWithClassName:@"ShoppingList"];
     [query whereKey:@"users" equalTo:self.user.objectId];
     
+    //Create the local list objects
     self.lists = [[NSMutableArray alloc] init];
     
     NSArray *tempList = [query findObjects];
@@ -42,6 +49,8 @@
         GGShoppingList *list = [[GGShoppingList alloc] initFromObject:pfList];
         [self.lists addObject:list];
     }
+    
+    //Instantiate the tableview methods
     self.tableView.dataSource = (id)self;
     [self.tableView registerClass:[GGCell class] forCellReuseIdentifier:@"cell"];
     self.tableView.delegate = (id)self;

@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
 @interface GGSingleton : NSObject {
-    
-    
+    PFUser *user;
+    NSMutableArray *lists;
 }
-+ (id)sharedInstance;
+@property (strong, nonatomic) PFUser *user;
+@property (strong, nonatomic) NSMutableArray *lists;
++(id)sharedData;
+
 @end

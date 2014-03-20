@@ -135,7 +135,7 @@
         <!--Lists View Controller-->
         <scene sceneID="c0r-I7-dHS">
             <objects>
-                <viewController id="b7O-se-WQj" customClass="GGListsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="listsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b7O-se-WQj" customClass="GGListsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Bm-0b-vyF"/>
                         <viewControllerLayoutGuide type="bottom" id="qmu-FN-sfa"/>

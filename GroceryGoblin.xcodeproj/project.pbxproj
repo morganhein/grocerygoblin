@@ -163,9 +163,9 @@
 				9038066218DAC016003B2F26 /* GGLoginViewController.h */,
 				9038066318DAC016003B2F26 /* GGLoginViewController.m */,
 				9038066518DACC2D003B2F26 /* GGListsViewController.h */,
+				9038066618DACC2D003B2F26 /* GGListsViewController.m */,
 				9D98625F18DB5198005E3784 /* GGSingleton.h */,
 				9D98626018DB5198005E3784 /* GGSingleton.m */,
-				9038066618DACC2D003B2F26 /* GGListsViewController.m */,
 				9091026B188B2AFB00F488DA /* GGViewController.h */,
 				9091026C188B2AFB00F488DA /* GGViewController.m */,
 			);
