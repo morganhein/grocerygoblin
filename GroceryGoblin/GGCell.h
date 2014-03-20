@@ -10,6 +10,6 @@
 #import "GGTableViewCellDelegate.h"
 
 @interface GGCell : UITableViewCell
-@property (nonatomic) GGShoppingItem *shopItem;
+@property (nonatomic) NSObject *item;
 @property (nonatomic, assign) id<GGTableViewCellDelegate> delegate;
 @end

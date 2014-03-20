@@ -7,17 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GGShoppingItem.h"
-
+#import <Parse/Parse.h>
 
 @interface GGShoppingList : NSObject
 
-@property (nonatomic, strong) NSMutableArray *listItems;
-
-//-(void) addItemToList:(GGShoppingItem *)item;
-//-(void) removeItemFromList:(GG ShoppingItem* )item;
-
-
-
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *identifer;
+@property (nonatomic) BOOL completed;
+-(id)initFromObject:(PFObject *)list;
+-(id)init:(PFObject *)list;
 
 @end

@@ -11,7 +11,7 @@
 
 @protocol GGTableViewCellDelegate <NSObject>
 
--(void) shoppingItemCompleted:(GGShoppingItem *)shopItem;
--(void) shoppingItemAdded:(GGShoppingItem *)shopItem;
+-(void) itemCompleted:(NSObject *)item;
+-(void) itemAdded:(NSObject *)item;
 
 @end

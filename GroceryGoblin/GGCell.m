@@ -64,7 +64,7 @@
              ];
         }
         if (_deleteOnDragRelease) {
-            [self.delegate shoppingItemCompleted:self.shopItem];
+            [self.delegate itemCompleted:self.item];
         }
     }
 }

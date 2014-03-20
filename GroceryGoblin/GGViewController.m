@@ -57,8 +57,6 @@
     PFUser *secondUser = [PFUser user];
     secondUser = [[userQuery findObjects] objectAtIndex:0];
     [self addUser:secondUser toList:self.list];
-    
-    
 
     
     NSLog(@"%@", [self.list objectId]);
@@ -70,9 +68,6 @@
         
     }
     
-
-
-    
     self.itemsTableView.dataSource = self;
     [self.itemsTableView registerClass:[GGCell class] forCellReuseIdentifier:@"cell"];
     
@@ -82,8 +77,6 @@
     
     
     self.createNewItemTextField.delegate = (id)self;
-
-
 
 }
 
@@ -104,7 +97,7 @@
     GGShoppingItem *item = self.displayList[index];
     cell.textLabel.text = item.name;
     cell.delegate = self;
-    cell.shopItem = item;
+    cell.item = item;
     return cell;
 }
 
@@ -123,8 +116,9 @@
     cell.backgroundColor = [self colorForIndex:indexPath.row];
 }
 
--(void)shoppingItemCompleted:(GGShoppingItem *)shopItem {
+-(void)itemCompleted:(NSObject *)obj {
     // use the UITableView to animate the removal of this row
+    GGShoppingItem *shopItem = (GGShoppingItem *)obj;
     NSUInteger index = [self.displayList indexOfObject:shopItem];
     [self.itemsTableView beginUpdates];
     [self.displayList removeObject:shopItem];
@@ -175,22 +169,5 @@
     [newList setObject:@[user.objectId] forKey:@"users"];
     [newList saveInBackground];
     return newList;
-}
-
--(void)createNewUserWithName:(NSString*)name andPass:(NSString*)pass{
-    PFUser *user = [PFUser user];
-    user.username = name;
-    user.password = pass;
-
-
-    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error) {
-        // Hooray! Let them use the app now.
-        } else {
-            NSString *errorString = [error userInfo][@"error"];
-            // Show the errorString somewhere and let the user try again.
-        }
-    }];
-    
 }
 @end

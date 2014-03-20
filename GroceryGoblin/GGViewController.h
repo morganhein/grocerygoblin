@@ -20,9 +20,6 @@
 @property (nonatomic, strong) PFObject *list;
 @property (nonatomic, strong) NSMutableArray *items;
 
-
-
-
 - (IBAction)createNewItemTextField:(UITextField *)sender;
 
 @end
