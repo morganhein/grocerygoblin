@@ -46,10 +46,10 @@
         NSLog(@"Success");
         self.user = user;
 //        listsViewController = [[GGListsViewController alloc] initWithNibName:@"GGListsViewController" bundle:Nil];
-//        self.user;
+//        listsViewController.user = self.user;
+//        [self presentViewController:listsViewController animated:YES completion:nil];
 //        [self.navigationController pushViewController:listsViewController animated:YES];
-//self.listsViewController = [[GGListsViewController alloc] init];
-//        [self presentViewController:self.listsViewController animated:YES completion:nil];
+//        self.listsViewController = [[GGListsViewController alloc] init];
 //        [self presentViewController:self.listsViewController animated:YES completion:nil];
     } else {
         NSLog(@"Error");

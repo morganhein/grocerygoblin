@@ -75,7 +75,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="j5F-5I-8lq" eventType="touchUpInside" id="fnO-w1-gxx"/>
-                                    <segue destination="b7O-se-WQj" kind="modal" identifier="toLists" id="YHL-lb-7Ih"/>
+                                    <segue destination="b7O-se-WQj" kind="modal" identifier="toLists" id="6l2-05-oHR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kma-xV-b0l">
@@ -122,7 +122,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="wxY-Ks-Yjg" id="fvz-7A-JFu"/>
-                        <segue destination="vXZ-lx-hvc" kind="modal" id="9g6-ad-KkK"/>
+                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="toItems" id="9g6-ad-KkK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mpg-DP-ABW" userLabel="First Responder" sceneMemberID="firstResponder"/>

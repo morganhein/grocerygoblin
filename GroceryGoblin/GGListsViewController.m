@@ -42,6 +42,11 @@
         GGShoppingList *list = [[GGShoppingList alloc] initFromObject:pfList];
         [self.lists addObject:list];
     }
+    self.tableView.dataSource = (id)self;
+    [self.tableView registerClass:[GGCell class] forCellReuseIdentifier:@"cell"];
+    self.tableView.delegate = (id)self;
+    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+    self.tableView.backgroundColor = [UIColor blackColor];
 }
 
 //    self.lists = [query findObjects];

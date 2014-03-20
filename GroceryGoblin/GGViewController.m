@@ -128,7 +128,7 @@
     [self.itemsTableView endUpdates];
 }
 
--(void)shoppingItemAdded:(GGShoppingItem *)shopItem {
+-(void)itemAdded:(GGShoppingItem *)shopItem {
     [self.itemsTableView beginUpdates];
     [self.displayList insertObject:shopItem atIndex:0];
     PFObject *newItem = [PFObject objectWithClassName:@"ListItem"];
@@ -152,7 +152,7 @@
 
 - (IBAction)createNewItemTextField:(UITextField *)sender {
     GGShoppingItem *item = [[GGShoppingItem alloc] initItemWithName:sender.text andQuantity:@1];
-    [self shoppingItemAdded:item];
+    [self itemAdded:item];
     self.createNewItemTextField.text = @"";
 }
 
