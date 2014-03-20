@@ -25,13 +25,76 @@
     return self;
 }
 
+//making the login button in this method
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //self.view.backgroundColor = [UIColor lightGrayColor];
 	// Do any additional setup after loading the view.
     self.passWord.delegate = (id)self;
     self.userName.delegate= (id)self;
+    UIFont *buttonFont = [UIFont fontWithName:@"Noteworthy-Bold" size:17.0];
+    UIColor *buttonColorDefault = [UIColor colorWithRed:90.0f/255.0f green:90.0f/255.0f blue:90.0f/255.0f alpha:1.0];
+    UIColor *buttonColorHighlight = [UIColor colorWithRed:255.0f/255.0f green:255.0f/255.0f blue:255.0f/255.0f alpha:1.0];
+    UIImage *btn = [UIImage imageNamed:@"Login Blue.png"];
+    UIImage *btnh = [UIImage imageNamed:@"Login Blue.png"];
+    
+    
+    UIButton *aboutBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [aboutBtn addTarget:self action:@selector(showAboutPage) forControlEvents:UIControlEventTouchUpInside];
+    //[aboutBtn setTitle:@"Login" forState:UIControlStateNormal];
+    [aboutBtn setFrame:CGRectMake(115.0, 260.0, 90.0, 35.0)];
+    [aboutBtn setBackgroundImage:btn forState:UIControlStateNormal];
+    [aboutBtn setBackgroundImage:btnh forState:UIControlStateHighlighted];
+    [aboutBtn.titleLabel setFont:buttonFont];
+    [aboutBtn setTitleColor:buttonColorDefault forState:UIControlStateNormal];
+    [aboutBtn setTitleColor:buttonColorHighlight forState:UIControlStateHighlighted];
+    [self.view addSubview:aboutBtn];
+    
+    UIImage *newbtn = [UIImage imageNamed:@"Sign up free.png"];
+    UIImage *newbtnh = [UIImage imageNamed:@"Sign up free.png"];
+    UIButton *newuser = [UIButton buttonWithType:UIButtonTypeCustom];
+    [newuser addTarget:self action:@selector(newuserPage) forControlEvents:UIControlEventTouchUpInside];
+    //[aboutBtn setTitle:@"Login" forState:UIControlStateNormal];
+    [newuser setFrame:CGRectMake(102.0, 330.0, 120.0, 30.0)];
+    [newuser setBackgroundImage:newbtn forState:UIControlStateNormal];
+    [newuser setBackgroundImage:newbtnh forState:UIControlStateHighlighted];
+    [newuser.titleLabel setFont:buttonFont];
+    [newuser setTitleColor:buttonColorDefault forState:UIControlStateNormal];
+    [newuser setTitleColor:buttonColorHighlight forState:UIControlStateHighlighted];
+    //displays the buttons
+    [self.view addSubview:newuser];
+
+    
 }
+
+- (void) newuserPage {
+    NSLog(@"SignUp!")
+    ;}
+
+//this runs the button I made, the green login button
+- (void)showAboutPage
+{
+  
+    PFUser *user = [PFUser user];
+     user = [PFUser logInWithUsername:self.userName.text password:self.passWord.text];
+     if (user) {
+     NSLog(@"Success");
+     self.user = user;
+     //        listsViewController = [[GGListsViewController alloc] initWithNibName:@"GGListsViewController" bundle:Nil];
+     //        listsViewController.user = self.user;
+     //        [self presentViewController:listsViewController animated:YES completion:nil];
+     //        [self.navigationController pushViewController:listsViewController animated:YES];
+     //        self.listsViewController = [[GGListsViewController alloc] init];
+     //        [self presentViewController:self.listsViewController animated:YES completion:nil];
+     } else {
+     NSLog(@"Error");
+     }
+    
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -39,8 +102,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+//commented this out to test other functionality of other button, this button should still work if we wanna go back to it
 - (IBAction)loginButton:(UIButton *)sender {
-    PFUser *user = [PFUser user];
+    /*PFUser *user = [PFUser user];
     user = [PFUser logInWithUsername:self.userName.text password:self.passWord.text];
     if (user) {
         NSLog(@"Success");
@@ -53,7 +118,7 @@
 //        [self presentViewController:self.listsViewController animated:YES completion:nil];
     } else {
         NSLog(@"Error");
-    }
+    }*/
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

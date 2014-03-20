@@ -15,7 +15,6 @@
 		038D5AD518D2332600B6EA92 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D5AD418D2332600B6EA92 /* Security.framework */; };
 		038D5AD718D2333000B6EA92 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D5AD618D2333000B6EA92 /* StoreKit.framework */; };
 		038D5AD918D2333C00B6EA92 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D5AD818D2333C00B6EA92 /* SystemConfiguration.framework */; };
-		90319B6918D5324F00E628CB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D5AC818D2325100B6EA92 /* Parse.framework */; };
 		9038066418DAC016003B2F26 /* GGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9038066318DAC016003B2F26 /* GGLoginViewController.m */; };
 		9038066718DACC2D003B2F26 /* GGListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9038066618DACC2D003B2F26 /* GGListsViewController.m */; };
 		9038066A18DAE50F003B2F26 /* GGShoppingList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9038066918DAE50F003B2F26 /* GGShoppingList.m */; };
@@ -37,6 +36,14 @@
 		90910280188B2AFC00F488DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9091027E188B2AFC00F488DA /* InfoPlist.strings */; };
 		90910282188B2AFC00F488DA /* GroceryGoblinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90910281188B2AFC00F488DA /* GroceryGoblinTests.m */; };
 		9091028D188B2B9800F488DA /* GGShoppingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9091028C188B2B9800F488DA /* GGShoppingItem.m */; };
+		9D98624D18DB238A005E3784 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98624C18DB238A005E3784 /* Parse.framework */; };
+		9D98624F18DB2456005E3784 /* Login.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D98624E18DB2456005E3784 /* Login.png */; };
+		9D98625118DB2B95005E3784 /* newuser.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D98625018DB2B95005E3784 /* newuser.png */; };
+		9D98625318DB2E6B005E3784 /* bgimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D98625218DB2E6B005E3784 /* bgimg.png */; };
+		9D98625518DB2F6E005E3784 /* signupbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D98625418DB2F6E005E3784 /* signupbutton.png */; };
+		9D98625718DB309C005E3784 /* Login Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D98625618DB309C005E3784 /* Login Blue.png */; };
+		9D98625918DB30A0005E3784 /* Sign up free.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D98625818DB30A0005E3784 /* Sign up free.png */; };
+		9D98625B18DB336C005E3784 /* Goblin.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D98625A18DB336C005E3784 /* Goblin.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +57,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		038D5AC818D2325100B6EA92 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = GroceryGoblin/Parse.framework; sourceTree = "<group>"; };
 		038D5ACA18D232D400B6EA92 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		038D5ACC18D232DC00B6EA92 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		038D5ACE18D232E700B6EA92 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -91,6 +97,14 @@
 		90910281188B2AFC00F488DA /* GroceryGoblinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroceryGoblinTests.m; sourceTree = "<group>"; };
 		9091028B188B2B9800F488DA /* GGShoppingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGShoppingItem.h; sourceTree = "<group>"; };
 		9091028C188B2B9800F488DA /* GGShoppingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGShoppingItem.m; sourceTree = "<group>"; };
+		9D98624C18DB238A005E3784 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		9D98624E18DB2456005E3784 /* Login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Login.png; sourceTree = "<group>"; };
+		9D98625018DB2B95005E3784 /* newuser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newuser.png; sourceTree = "<group>"; };
+		9D98625218DB2E6B005E3784 /* bgimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgimg.png; sourceTree = "<group>"; };
+		9D98625418DB2F6E005E3784 /* signupbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signupbutton.png; sourceTree = "<group>"; };
+		9D98625618DB309C005E3784 /* Login Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login Blue.png"; sourceTree = "<group>"; };
+		9D98625818DB30A0005E3784 /* Sign up free.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sign up free.png"; sourceTree = "<group>"; };
+		9D98625A18DB336C005E3784 /* Goblin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Goblin.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,13 +112,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90319B6918D5324F00E628CB /* Parse.framework in Frameworks */,
 				038D5AD918D2333C00B6EA92 /* SystemConfiguration.framework in Frameworks */,
 				038D5AD718D2333000B6EA92 /* StoreKit.framework in Frameworks */,
 				038D5AD518D2332600B6EA92 /* Security.framework in Frameworks */,
 				038D5AD318D2331400B6EA92 /* MobileCoreServices.framework in Frameworks */,
 				038D5AD118D2330300B6EA92 /* libz.dylib in Frameworks */,
 				038D5ACF18D232E700B6EA92 /* CoreLocation.framework in Frameworks */,
+				9D98624D18DB238A005E3784 /* Parse.framework in Frameworks */,
 				038D5ACD18D232DC00B6EA92 /* CFNetwork.framework in Frameworks */,
 				038D5ACB18D232D400B6EA92 /* AudioToolbox.framework in Frameworks */,
 				905650F218CFB9B00000EF2A /* QuartzCore.framework in Frameworks */,
@@ -183,12 +197,12 @@
 				038D5ACE18D232E700B6EA92 /* CoreLocation.framework */,
 				038D5ACC18D232DC00B6EA92 /* CFNetwork.framework */,
 				038D5ACA18D232D400B6EA92 /* AudioToolbox.framework */,
-				038D5AC818D2325100B6EA92 /* Parse.framework */,
 				905650F118CFB9B00000EF2A /* QuartzCore.framework */,
 				90910253188B2AFB00F488DA /* Foundation.framework */,
 				90910255188B2AFB00F488DA /* CoreGraphics.framework */,
 				90910257188B2AFB00F488DA /* UIKit.framework */,
 				90910275188B2AFC00F488DA /* XCTest.framework */,
+				9D98624C18DB238A005E3784 /* Parse.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -212,8 +226,15 @@
 		9091025A188B2AFB00F488DA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9D98625818DB30A0005E3784 /* Sign up free.png */,
 				9091025B188B2AFB00F488DA /* GroceryGoblin-Info.plist */,
+				9D98625A18DB336C005E3784 /* Goblin.png */,
 				9091025C188B2AFB00F488DA /* InfoPlist.strings */,
+				9D98625618DB309C005E3784 /* Login Blue.png */,
+				9D98625218DB2E6B005E3784 /* bgimg.png */,
+				9D98624E18DB2456005E3784 /* Login.png */,
+				9D98625418DB2F6E005E3784 /* signupbutton.png */,
+				9D98625018DB2B95005E3784 /* newuser.png */,
 				9091025F188B2AFB00F488DA /* main.m */,
 				90910261188B2AFB00F488DA /* GroceryGoblin-Prefix.pch */,
 			);
@@ -318,6 +339,13 @@
 				9091026A188B2AFB00F488DA /* Main_iPad.storyboard in Resources */,
 				9091026F188B2AFB00F488DA /* Images.xcassets in Resources */,
 				90910267188B2AFB00F488DA /* Main_iPhone.storyboard in Resources */,
+				9D98625B18DB336C005E3784 /* Goblin.png in Resources */,
+				9D98625318DB2E6B005E3784 /* bgimg.png in Resources */,
+				9D98625118DB2B95005E3784 /* newuser.png in Resources */,
+				9D98625518DB2F6E005E3784 /* signupbutton.png in Resources */,
+				9D98625718DB309C005E3784 /* Login Blue.png in Resources */,
+				9D98625918DB30A0005E3784 /* Sign up free.png in Resources */,
+				9D98624F18DB2456005E3784 /* Login.png in Resources */,
 				9091025E188B2AFB00F488DA /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +513,7 @@
 					"$(inherited)",
 					/Users/josh/grocerygoblin/GroceryGoblin,
 					/Users/morgan/Desktop/GroceryGoblin/GroceryGoblin/GroceryGoblin,
+					/Users/iguest/Desktop/grocerygoblin,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GroceryGoblin/GroceryGoblin-Prefix.pch";
@@ -503,6 +532,7 @@
 					"$(inherited)",
 					/Users/josh/grocerygoblin/GroceryGoblin,
 					/Users/morgan/Desktop/GroceryGoblin/GroceryGoblin/GroceryGoblin,
+					/Users/iguest/Desktop/grocerygoblin,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GroceryGoblin/GroceryGoblin-Prefix.pch";
