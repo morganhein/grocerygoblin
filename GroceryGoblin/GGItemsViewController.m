@@ -24,17 +24,6 @@
     
     
     self.displayList = [[NSMutableArray alloc] init];
-//    PFUser *user = [PFUser user];
-//    if([PFUser currentUser] != NULL){
-//        user = [PFUser currentUser];
-//    }else{
-//        user = [PFUser logInWithUsername:@"Josh" password:@"plaintextfolyfe"];
-//    }
-   
-  //  [self createNewUserWithName:@"Morgan" andPass:@"iloveboobies"];
-   // [self createNewUserWithName:@"Evan" andPass:@"iALSOloveboobies!"];
-    
-    //Load the Data Singleton
     self.singleton = [GGSingleton sharedData];
     self.user = [self.singleton.items valueForKey:@"user"];
     self.currentList = [self.singleton.items valueForKey:@"currentList"];
@@ -49,41 +38,26 @@
             [itemQuery whereKey:@"ShoppingList" equalTo:self.list];
             NSArray *list2 = [itemQuery findObjects];
             self.items = [self.list objectForKey:@"Items"];
-//            [self.itemsTableView beginUpdates];
+
             for(PFObject *item in list2){
                 GGShoppingItem *newItem = [GGShoppingItem shoppingItemWithName:([item valueForKey:@"name"]) andQuantity:@1];
                 newItem.itemParseObject = item;
                 [self.displayList addObject:newItem];
-//                [self.itemsTableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]]withRowAnimation:UITableViewRowAnimationTop];
             }
             NSLog(@"Done grabbing items");
-//            [self.itemsTableView endUpdates];
+
             [self.itemsTableView reloadData];
         } else {
             // Log details of the failure
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
-//
-//    NSArray *lists = [query findObjects];
-//    for(PFObject *list in lists){
-//        NSLog(@"Hey, here's a list! %@", list.objectId);
-//    }
-    
-    //MORGAN AND EVAN - CHANGE THE INDEX HERE TO GET THE ITEMS FOR DIFFERENT LISTS THE USER HAS ACCESS TO
-//    self.list = [lists objectAtIndex:2];
-
-    
-    
 //    //HERE'S SOME SAMPLE CODE FOR ADDING A USER.  Modify the query accordingly.
 //    PFQuery *userQuery = [PFUser query];
 //    [userQuery whereKey:@"username" equalTo:@"Morgan"];
 //    PFUser *secondUser = [PFUser user];
 //    secondUser = [[userQuery findObjects] objectAtIndex:0];
 //    [self addUser:secondUser toList:self.list];
-
-    
-
      
     self.itemsTableView.dataSource = self;
     [self.itemsTableView registerClass:[GGCell class] forCellReuseIdentifier:@"cell"];

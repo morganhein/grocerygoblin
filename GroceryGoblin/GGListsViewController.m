@@ -33,24 +33,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    //Load the Data Singleton
-    self.singleton = [GGSingleton sharedData];
-    self.user = [self.singleton.items valueForKey:@"user"];
-
-    
-    //Query Parse for our shopping lists
-    PFQuery *query = [PFQuery queryWithClassName:@"ShoppingList"];
-    [query whereKey:@"users" equalTo:self.user.objectId];
-    
-    //Create the local list objects
-    self.lists = [[NSMutableArray alloc] init];
-    
-    NSArray *tempList = [query findObjects];
-    for(PFObject *pfList in tempList){
-        NSLog(@"Hey, here's a list! %@", pfList.objectId);
-        GGShoppingList *list = [[GGShoppingList alloc] initFromObject:pfList];
-        [self.lists addObject:list];
-    }
+    [self upDateView];
     
     //Instantiate the tableview methods
     self.tableView.dataSource = self;
@@ -66,6 +49,30 @@
 }
 
 //    self.lists = [query findObjects];
+
+-(void)upDateView {
+    
+    //Load the Data Singleton
+    self.singleton = [GGSingleton sharedData];
+    self.user = [self.singleton.items valueForKey:@"user"];
+    
+    
+    //Query Parse for our shopping lists
+    PFQuery *query = [PFQuery queryWithClassName:@"ShoppingList"];
+    [query whereKey:@"users" equalTo:self.user.objectId];
+    
+    //Create the local list objects
+    self.lists = [[NSMutableArray alloc] init];
+    
+    NSArray *tempList = [query findObjects];
+    for(PFObject *pfList in tempList){
+        NSLog(@"Hey, here's a list! %@", pfList.objectId);
+        GGShoppingList *list = [[GGShoppingList alloc] initFromObject:pfList];
+        [self.lists addObject:list];
+    }
+    [self.tableView reloadData];
+
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -132,6 +139,7 @@
     [self.lists insertObject:(GGShoppingList* )listItem atIndex:0];
     [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]]withRowAnimation:UITableViewRowAnimationTop];
     [self.tableView endUpdates];
+    [self upDateView];
 }
 
 -(void)doubleTap:(NSObject *)obj {
