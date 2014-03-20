@@ -78,14 +78,12 @@
         if (!error) {
             [self showListsPage];
         } else {
-            NSString *errorString = [error userInfo][@"error"];
-//            NSLog(errorString);
             // Show the errorString somewhere and let the user try again.
+            //NSString *errorString = [error userInfo][@"error"];
         }
     }];
 }
 
-//this runs the button I made, the green login button
 - (void)showListsPage
 {
     PFUser *user = [PFUser user];
@@ -108,10 +106,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"toLists"]) {
-        GGListsViewController *con = (GGListsViewController *)segue.destinationViewController;
+//        GGListsViewController *con = (GGListsViewController *)segue.destinationViewController;
 //        con.user = self.user;
     }
 }

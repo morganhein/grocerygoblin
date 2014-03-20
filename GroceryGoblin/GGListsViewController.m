@@ -19,15 +19,6 @@
 @implementation GGListsViewController
 
 
-//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-//{
-//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-//    if (self) {
-//        // Custom initialization
-//    }
-//    return self;
-//}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -119,6 +110,7 @@
     NSLog(@"Creating new list");
     GGShoppingList *list = [[GGShoppingList alloc] initWithName:self.createNewList.text];
     [self itemAdded:list];
+    self.createNewList.text = @"";
 }
 
 -(void)itemCompleted:(NSObject *)obj {
@@ -150,22 +142,12 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"toItems"]) {
-//        GGItemsViewController *con = (GGItemsViewController *)segue.destinationViewController;
-////        con.gglist = self.nextList;
         [self.singleton.items setObject:self.nextList forKey:@"currentList"];
-//        [self.singleton.items setValue:self.nextList forKey:@"currentList"];`
     }
 }
 
 -(void) addUser:(PFUser *)user toList:(PFObject *)list{
     [list addObject:user.objectId forKey:@"users"];
 }
-//PFObject *newItem = [PFObject objectWithClassName:@"ListItem"];
-//[newItem setObject:[PFUser currentUser] forKey:@"createdBy"];
-//newItem[@"name"] = shopItem.name;
-//newItem[@"quantity"] = shopItem.quantity;
-//[newItem setObject:self.list forKey:@"ShoppingList"];
-//shopItem.itemParseObject = newItem;
-//[newItem saveInBackground];
 
 @end

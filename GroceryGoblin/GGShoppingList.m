@@ -8,7 +8,6 @@
 
 #import "GGShoppingList.h"
 #import "GGSingleton.h"
-//#import "GGPFObject.h"
 
 @implementation GGShoppingList
 
@@ -16,8 +15,7 @@
     if (self == [super init]) {
         self.identifier = list.objectId;
         self.name = [list objectForKey:@"ListName"];
-//        GGPFObject *obj = [[GGPFObject alloc] initFromObject:list];
-//        self.name = obj.getInfo;
+
     }
     return self;
 }

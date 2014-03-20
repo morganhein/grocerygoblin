@@ -52,6 +52,7 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
+    
 //    //HERE'S SOME SAMPLE CODE FOR ADDING A USER.  Modify the query accordingly.
 //    PFQuery *userQuery = [PFUser query];
 //    [userQuery whereKey:@"username" equalTo:@"Morgan"];
@@ -131,7 +132,6 @@
     [self.displayList insertObject:shopItem atIndex:0];
     
     PFObject *newItem = [PFObject objectWithClassName:@"ListItem"];
-    //[newItem setObject:[PFUser currentUser] forKey:@"createdBy"];
     newItem[@"name"] = shopItem.name;
     newItem[@"quantity"] = shopItem.quantity;
     [newItem setObject:self.list forKey:@"ShoppingList"];
