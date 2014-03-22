@@ -15,10 +15,12 @@
 		038D5AD518D2332600B6EA92 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D5AD418D2332600B6EA92 /* Security.framework */; };
 		038D5AD718D2333000B6EA92 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D5AD618D2333000B6EA92 /* StoreKit.framework */; };
 		038D5AD918D2333C00B6EA92 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D5AD818D2333C00B6EA92 /* SystemConfiguration.framework */; };
+		9016330118DCDABB0054E8DA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9016330018DCDABB0054E8DA /* Parse.framework */; };
+		9016330818DCF51A0054E8DA /* GGListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9016330718DCF51A0054E8DA /* GGListItem.m */; };
 		9038066418DAC016003B2F26 /* GGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9038066318DAC016003B2F26 /* GGLoginViewController.m */; };
 		9038066718DACC2D003B2F26 /* GGListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9038066618DACC2D003B2F26 /* GGListsViewController.m */; };
 		9038066A18DAE50F003B2F26 /* GGShoppingList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9038066918DAE50F003B2F26 /* GGShoppingList.m */; };
-		905650F018CFB7950000EF2A /* GGCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 905650EF18CFB7950000EF2A /* GGCell.m */; };
+		905650F018CFB7950000EF2A /* GGTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 905650EF18CFB7950000EF2A /* GGTableViewCell.m */; };
 		905650F218CFB9B00000EF2A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 905650F118CFB9B00000EF2A /* QuartzCore.framework */; };
 		90910254188B2AFB00F488DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90910253188B2AFB00F488DA /* Foundation.framework */; };
 		90910256188B2AFB00F488DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90910255188B2AFB00F488DA /* CoreGraphics.framework */; };
@@ -36,7 +38,6 @@
 		90910280188B2AFC00F488DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9091027E188B2AFC00F488DA /* InfoPlist.strings */; };
 		90910282188B2AFC00F488DA /* GroceryGoblinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90910281188B2AFC00F488DA /* GroceryGoblinTests.m */; };
 		9091028D188B2B9800F488DA /* GGShoppingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9091028C188B2B9800F488DA /* GGShoppingItem.m */; };
-		9D98624D18DB238A005E3784 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98624C18DB238A005E3784 /* Parse.framework */; };
 		9D98624F18DB2456005E3784 /* Login.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D98624E18DB2456005E3784 /* Login.png */; };
 		9D98625118DB2B95005E3784 /* newuser.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D98625018DB2B95005E3784 /* newuser.png */; };
 		9D98625318DB2E6B005E3784 /* bgimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D98625218DB2E6B005E3784 /* bgimg.png */; };
@@ -66,14 +67,17 @@
 		038D5AD418D2332600B6EA92 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		038D5AD618D2333000B6EA92 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		038D5AD818D2333C00B6EA92 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9016330018DCDABB0054E8DA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = GroceryGoblin/Parse.framework; sourceTree = "<group>"; };
+		9016330618DCF51A0054E8DA /* GGListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGListItem.h; sourceTree = "<group>"; };
+		9016330718DCF51A0054E8DA /* GGListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGListItem.m; sourceTree = "<group>"; };
 		9038066218DAC016003B2F26 /* GGLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGLoginViewController.h; sourceTree = "<group>"; };
 		9038066318DAC016003B2F26 /* GGLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGLoginViewController.m; sourceTree = "<group>"; };
 		9038066518DACC2D003B2F26 /* GGListsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGListsViewController.h; sourceTree = "<group>"; };
 		9038066618DACC2D003B2F26 /* GGListsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGListsViewController.m; sourceTree = "<group>"; };
 		9038066818DAE50F003B2F26 /* GGShoppingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGShoppingList.h; sourceTree = "<group>"; };
 		9038066918DAE50F003B2F26 /* GGShoppingList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGShoppingList.m; sourceTree = "<group>"; };
-		905650EE18CFB7950000EF2A /* GGCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGCell.h; sourceTree = "<group>"; };
-		905650EF18CFB7950000EF2A /* GGCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGCell.m; sourceTree = "<group>"; };
+		905650EE18CFB7950000EF2A /* GGTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTableViewCell.h; sourceTree = "<group>"; };
+		905650EF18CFB7950000EF2A /* GGTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTableViewCell.m; sourceTree = "<group>"; };
 		905650F118CFB9B00000EF2A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		905650F418CFBFE80000EF2A /* GGTableViewCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTableViewCellDelegate.h; sourceTree = "<group>"; };
 		90910250188B2AFB00F488DA /* GroceryGoblin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryGoblin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,13 +119,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9016330118DCDABB0054E8DA /* Parse.framework in Frameworks */,
 				038D5AD918D2333C00B6EA92 /* SystemConfiguration.framework in Frameworks */,
 				038D5AD718D2333000B6EA92 /* StoreKit.framework in Frameworks */,
 				038D5AD518D2332600B6EA92 /* Security.framework in Frameworks */,
 				038D5AD318D2331400B6EA92 /* MobileCoreServices.framework in Frameworks */,
 				038D5AD118D2330300B6EA92 /* libz.dylib in Frameworks */,
 				038D5ACF18D232E700B6EA92 /* CoreLocation.framework in Frameworks */,
-				9D98624D18DB238A005E3784 /* Parse.framework in Frameworks */,
 				038D5ACD18D232DC00B6EA92 /* CFNetwork.framework in Frameworks */,
 				038D5ACB18D232D400B6EA92 /* AudioToolbox.framework in Frameworks */,
 				905650F218CFB9B00000EF2A /* QuartzCore.framework in Frameworks */,
@@ -153,8 +157,10 @@
 				9091028C188B2B9800F488DA /* GGShoppingItem.m */,
 				9038066818DAE50F003B2F26 /* GGShoppingList.h */,
 				9038066918DAE50F003B2F26 /* GGShoppingList.m */,
-				905650EE18CFB7950000EF2A /* GGCell.h */,
-				905650EF18CFB7950000EF2A /* GGCell.m */,
+				905650EE18CFB7950000EF2A /* GGTableViewCell.h */,
+				905650EF18CFB7950000EF2A /* GGTableViewCell.m */,
+				9016330618DCF51A0054E8DA /* GGListItem.h */,
+				9016330718DCF51A0054E8DA /* GGListItem.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -194,6 +200,7 @@
 		90910252188B2AFB00F488DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9016330018DCDABB0054E8DA /* Parse.framework */,
 				038D5AD818D2333C00B6EA92 /* SystemConfiguration.framework */,
 				038D5AD618D2333000B6EA92 /* StoreKit.framework */,
 				038D5AD418D2332600B6EA92 /* Security.framework */,
@@ -370,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9016330818DCF51A0054E8DA /* GGListItem.m in Sources */,
 				9038066418DAC016003B2F26 /* GGLoginViewController.m in Sources */,
 				9091028D188B2B9800F488DA /* GGShoppingItem.m in Sources */,
 				90910264188B2AFB00F488DA /* GGAppDelegate.m in Sources */,
@@ -377,7 +385,7 @@
 				9091026D188B2AFB00F488DA /* GGItemsViewController.m in Sources */,
 				9D98626118DB5198005E3784 /* GGSingleton.m in Sources */,
 				9038066A18DAE50F003B2F26 /* GGShoppingList.m in Sources */,
-				905650F018CFB7950000EF2A /* GGCell.m in Sources */,
+				905650F018CFB7950000EF2A /* GGTableViewCell.m in Sources */,
 				90910260188B2AFB00F488DA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +528,8 @@
 					/Users/josh/grocerygoblin/GroceryGoblin,
 					/Users/morgan/Desktop/GroceryGoblin/GroceryGoblin/GroceryGoblin,
 					/Users/iguest/Desktop/grocerygoblin,
+					/Users/morgan/Desktop/GroceryGoblin,
+					/Users/morgan/Desktop/GroceryGoblin/GroceryGoblin,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GroceryGoblin/GroceryGoblin-Prefix.pch";
@@ -539,6 +549,8 @@
 					/Users/josh/grocerygoblin/GroceryGoblin,
 					/Users/morgan/Desktop/GroceryGoblin/GroceryGoblin/GroceryGoblin,
 					/Users/iguest/Desktop/grocerygoblin,
+					/Users/morgan/Desktop/GroceryGoblin,
+					/Users/morgan/Desktop/GroceryGoblin/GroceryGoblin,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GroceryGoblin/GroceryGoblin-Prefix.pch";

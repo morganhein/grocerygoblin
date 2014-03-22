@@ -15,7 +15,7 @@
     if (self == [super init]) {
         self.identifier = list.objectId;
         self.name = [list objectForKey:@"ListName"];
-
+        self.completed = [[list objectForKey:@"completed"] boolValue];
     }
     return self;
 }
@@ -33,7 +33,6 @@
     [newList setObject:@[user.objectId] forKey:@"users"];
     [newList saveInBackground];
     return [self initFromObject:newList];
-//    return (id)newList;
 }
 
 -(id)getId {

@@ -12,6 +12,7 @@
 @protocol GGTableViewCellDelegate <NSObject>
 
 -(void) itemCompleted:(NSObject *)item;
+-(void) itemDeleted:(NSObject *)item;
 -(void) itemAdded:(NSObject *)item;
 -(void) doubleTap:(NSObject *)item;
 

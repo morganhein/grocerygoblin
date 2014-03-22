@@ -8,8 +8,9 @@
 
 #import "GGItemsViewController.h"
 #import "GGShoppingItem.h"
-#import "GGCell.h"
+#import "GGTableViewCell.h"
 #import "GGSingleton.h"
+#import "GGTableViewCell.h"
 
 @interface GGItemsViewController ()
 
@@ -61,7 +62,7 @@
 //    [self addUser:secondUser toList:self.list];
      
     self.itemsTableView.dataSource = self;
-    [self.itemsTableView registerClass:[GGCell class] forCellReuseIdentifier:@"cell"];
+    [self.itemsTableView registerClass:[GGTableViewCell class] forCellReuseIdentifier:@"cell"];
     
     self.itemsTableView.delegate = self;
     self.itemsTableView.separatorStyle = UITableViewCellSelectionStyleNone;
@@ -85,12 +86,12 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *ident = @"cell";
-    GGCell *cell = [tableView dequeueReusableCellWithIdentifier:ident forIndexPath:indexPath];
+    GGTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ident forIndexPath:indexPath];
     int index = [indexPath row];
     GGShoppingItem *item = self.displayList[index];
-    cell.textLabel.text = item.name;
+//    cell.textLabel.text = item.name;
     cell.delegate = self;
-    cell.item = item;
+    cell.listItem = item;
     return cell;
 }
 
@@ -98,7 +99,7 @@
 -(UIColor *)colorForIndex:(NSInteger) index {
     NSUInteger iCount = self.displayList.count - 1;
     float value = ((float)index / (float)iCount) * 0.6;
-    return [UIColor colorWithRed:0 green:1 blue:value alpha:0.9];
+    return [UIColor colorWithRed:1.0 green:value blue:0.0 alpha:1.0];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -109,7 +110,7 @@
     cell.backgroundColor = [self colorForIndex:indexPath.row];
 }
 
--(void)itemCompleted:(NSObject *)obj {
+-(void)itemDeleted:(NSObject *)obj {
     // use the UITableView to animate the removal of this row
     GGShoppingItem *shopItem = (GGShoppingItem *)obj;
     NSUInteger index = [self.displayList indexOfObject:shopItem];
@@ -119,6 +120,10 @@
     [self.itemsTableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:index inSection:0]]
                           withRowAnimation:UITableViewRowAnimationFade];
     [self.itemsTableView endUpdates];
+}
+
+-(void)itemCompleted:(NSObject *)obj {
+    
 }
 
 - (IBAction)createNewItemTextField:(UITextField *)sender {

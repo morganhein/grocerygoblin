@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>C4B27E04-1864-42B8-8BDE-562ED97FB6D9</string>
+	<string>F37B3799-2874-414D-BF71-41E724157AC2</string>
 	<key>IDESourceControlProjectName</key>
 	<string>GroceryGoblin</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>826278FB-BFAD-449B-AAB9-75B1899D49D4</key>
-		<string>https://github.com/morganhein/grocerygoblin.git</string>
+		<key>E9C8A63B-42BC-4771-BD18-891C0350C93D</key>
+		<string>https://github.com/morganhein/GroceryGoblin.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>GroceryGoblin.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>826278FB-BFAD-449B-AAB9-75B1899D49D4</key>
+		<key>E9C8A63B-42BC-4771-BD18-891C0350C93D</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/morganhein/grocerygoblin.git</string>
+	<string>https://github.com/morganhein/GroceryGoblin.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>826278FB-BFAD-449B-AAB9-75B1899D49D4</string>
+	<string>E9C8A63B-42BC-4771-BD18-891C0350C93D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>826278FB-BFAD-449B-AAB9-75B1899D49D4</string>
+			<string>E9C8A63B-42BC-4771-BD18-891C0350C93D</string>
 			<key>IDESourceControlWCCName</key>
-			<string>grocerygoblin</string>
+			<string>GroceryGoblin</string>
 		</dict>
 	</array>
 </dict>

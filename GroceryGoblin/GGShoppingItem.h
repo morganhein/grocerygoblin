@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
+#import "GGListItem.h"
 
-@interface GGShoppingItem : NSObject
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic) NSNumber *quantity;
-@property (nonatomic) BOOL purchased;
-@property (nonatomic, strong) PFObject *itemParseObject;
+@interface GGShoppingItem : GGListItem
 
--(id)initItemWithName:(NSString *)name andQuantity:(NSNumber *)quantity;
-+(id)shoppingItemWithName:(NSString *)name andQuantity:(NSNumber *)quantity;
+    @property (nonatomic) NSNumber *quantity;
+    @property (nonatomic, strong) PFObject *itemParseObject;
+
+    -(id)initItemWithName:(NSString *)name andQuantity:(NSNumber *)quantity;
+    +(id)shoppingItemWithName:(NSString *)name andQuantity:(NSNumber *)quantity;
 
 @end

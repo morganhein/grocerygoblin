@@ -7,22 +7,31 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "GGListsViewController.h"
-#import "GGCell.h"
-#import "GGShoppingList.h"
 #import "GGSingleton.h"
-#import "GGItemsViewController.h"
 
 @interface GroceryGoblinTests : XCTestCase
 
 @end
 
-@implementation GroceryGoblinTests
+@implementation GroceryGoblinTests {
+    GGSingleton *singleton;
+    GGSingleton *doubleton;
+    NSString *testString;
+}
 
 - (void)setUp
 {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    //Create the test singletons
+    singleton = [GGSingleton sharedData];
+    doubleton = [GGSingleton sharedData];
+    //Create the test string
+    testString = @"This is a test";
+    //Store the string in the singleton
+    [singleton.items setObject:testString forKey:@"test"];
+    
 }
 
 - (void)tearDown
@@ -31,37 +40,11 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testSingleton
 {
-    self.tableView.dataSource = self;
-    [self.tableView registerClass:[GGCell class] forCellReuseIdentifier:@"cell"];
-    
-    self.tableView.delegate = self;
-    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
-    self.tableView.backgroundColor = [UIColor blackColor];
-    
-    -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-        return self.lists.count;
-    }
-    
-    -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-        NSString *ident = @"cell";
-        GGCell *cell = [tableView dequeueReusableCellWithIdentifier:ident forIndexPath:indexPath];
-        int index = [indexPath row];
-        GGShoppingList *list = self.lists[index];
-        cell.textLabel.text = list.name;
-        cell.delegate = (id)self;
-        cell.item = list;
-        return cell;
-    }
-    
-    -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-        return 50.0f;
-    }
-    
-    -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-        cell.backgroundColor = [self colorForIndex:indexPath.row];
-    }
+    //See if the data is still there and correctly stored
+    XCTAssertTrue([[singleton.items valueForKey:@"test"] isEqualToString:testString], @"String saved to singleton should equal testString'");
+    XCTAssertTrue([[doubleton.items valueForKey:@"test"] isEqualToString:testString], @"String saved to doubleton should equal testString'");
 }
 
 @end

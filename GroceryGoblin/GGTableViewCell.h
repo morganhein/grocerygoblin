@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "GGTableViewCellDelegate.h"
+#import "GGListItem.h"
 
-@interface GGCell : UITableViewCell
-@property (nonatomic) NSObject *item;
-@property (nonatomic, assign) id<GGTableViewCellDelegate> delegate;
+@interface GGTableViewCell : UITableViewCell
+    @property (nonatomic) GGListItem *listItem;
+    @property (nonatomic, assign) id<GGTableViewCellDelegate> delegate;
 @end
